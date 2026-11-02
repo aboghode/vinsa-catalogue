@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vinsa Jewels — Catalogue</title>
+<meta name="description" content="Vinsa Jewels catalogue — engagement rings, wedding bands, necklaces, earrings and bracelets. Dubai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ec; --paper:#ffffff; --ink:#1a1e1c; --muted:#6f746f; --line:#e4ddd0;
+  --green:#163f38; --green-2:#0e2b26; --green-soft:#e6ece8;
+  --gold:#b48f57; --gold-2:#d9c39a; --gold-soft:#f1e8d6;
+  --shadow:0 18px 50px -20px rgba(22,63,56,.35);
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif; --sans:'Jost',system-ui,sans-serif;
+}
+html[dir=rtl]{--serif:'Amiri','Cormorant Garamond',serif; --sans:'Tajawal','Jost',system-ui,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0}
+a{color:inherit}
+.wrap{padding:0 18px;max-width:1440px;margin:0 auto}
+[hidden]{display:none!important}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:20;background:rgba(246,243,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:10px;height:70px;min-width:0}
+.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;white-space:nowrap}
+.brand b{font-family:'Cormorant Garamond',serif;font-size:27px;letter-spacing:.3em;font-weight:500;color:var(--green);text-transform:uppercase;margin-inline-end:-.3em}
+.brand small{font-family:var(--sans);font-size:9.5px;letter-spacing:.32em;color:var(--gold);margin-top:5px;text-transform:uppercase}
+.search{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:999px;padding:8px 14px;max-width:430px;background:var(--paper)}
+.search input{flex:1 1 0;width:100%;border:0;outline:0;background:none;min-width:0;font-weight:300}
+.search svg{width:15px;height:15px;color:var(--muted);flex:none}
+.hbtn{flex:none;display:flex;align-items:center;gap:7px;font-size:12.5px;letter-spacing:.08em;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--paper);white-space:nowrap}
+.hbtn.on{background:var(--green);color:#fff;border-color:var(--green)}
+.hbtn.lang{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.04em;padding:7px 14px}
+html[dir=rtl] .hbtn.lang{font-family:'Jost',sans-serif;font-size:12.5px;letter-spacing:.12em}
+.hbtn b{font-weight:500}
+.ml-auto{margin-inline-start:auto}
+
+/* ---------- category nav (catalogue view) ---------- */
+nav.cats{background:var(--bg);border-bottom:1px solid var(--line)}
+.cats .row{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.cats .row::-webkit-scrollbar{display:none}
+.cat{font-family:var(--serif);font-size:18px;font-weight:500;letter-spacing:.04em;padding:13px 16px 11px;white-space:nowrap;border-bottom:2px solid transparent;color:var(--muted);transition:color .2s}
+html[dir=rtl] .cat{font-size:17px;letter-spacing:0}
+.cat:hover{color:var(--ink)}
+.cat.on{color:var(--green);border-bottom-color:var(--gold)}
+.cat span{font-family:var(--sans);font-size:10.5px;color:var(--gold);margin-inline-start:5px;letter-spacing:.05em;vertical-align:2px}
+
+/* ---------- landing ---------- */
+.hero{background:var(--green);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 85% -10%,rgba(180,143,87,.35),transparent 60%),radial-gradient(600px 300px at 10% 120%,rgba(255,255,255,.08),transparent 60%)}
+.hero .wrap{position:relative;padding-top:64px;padding-bottom:64px;display:grid;gap:18px;max-width:900px;text-align:center}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-2)}
+html[dir=rtl] .eyebrow{letter-spacing:.08em}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,6vw,66px);line-height:1.05;margin:0}
+.hero h1 i{font-style:italic;color:var(--gold-2)}
+.hero p{font-size:15.5px;line-height:1.7;color:rgba(255,255,255,.78);margin:0 auto;max-width:560px}
+.hero .ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.cta{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,.35);color:#fff;transition:.2s}
+html[dir=rtl] .cta{letter-spacing:.04em;font-size:13.5px}
+.cta.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+.cta.gold:hover{background:#c49f66}
+.cta:hover{border-color:#fff}
+.cta svg{width:16px;height:16px}
+.hairline{display:flex;align-items:center;gap:14px;justify-content:center;color:var(--gold-2)}
+.hairline::before,.hairline::after{content:"";height:1px;width:56px;background:currentColor;opacity:.6}
+
+.section{padding:54px 0 20px}
+.section h2{font-family:var(--serif);font-weight:500;font-size:34px;margin:0 0 6px;color:var(--green);text-align:center}
+.section .sub{text-align:center;color:var(--muted);font-size:13.5px;letter-spacing:.06em;margin:0 0 30px}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding-bottom:40px}
+@media(min-width:760px){.tiles{grid-template-columns:repeat(4,1fr);gap:22px}}
+.tile{display:flex;flex-direction:column;gap:12px;text-decoration:none;text-align:center}
+.tile .im{position:relative;aspect-ratio:1;background:var(--paper);border:1px solid var(--line);overflow:hidden;transition:.3s}
+.tile .im::after{content:"";position:absolute;inset:8px;border:1px solid var(--gold-2);opacity:0;transition:.3s}
+.tile:hover .im{box-shadow:var(--shadow);border-color:var(--gold-2)}
+.tile:hover .im::after{opacity:1}
+.tile img{width:100%;height:100%;object-fit:contain;padding:10%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.tile:hover img{transform:scale(1.06)}
+.tile .name{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--ink);line-height:1.1}
+.tile .cnt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:-6px}
+html[dir=rtl] .tile .cnt{letter-spacing:.04em}
+.tile.all .im{background:var(--green);border-color:var(--green);display:grid;place-items:center;color:#fff}
+.tile.all .im span{font-family:var(--serif);font-size:28px;font-weight:500;letter-spacing:.06em}
+.tile.all .im small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.24em;color:var(--gold-2);margin-top:8px;text-transform:uppercase}
+.promise{display:grid;grid-template-columns:1fr;gap:14px;padding:10px 0 60px}
+@media(min-width:760px){.promise{grid-template-columns:repeat(3,1fr);gap:22px}}
+.promise div{background:var(--paper);border:1px solid var(--line);padding:26px 24px;text-align:center}
+.promise b{display:block;font-family:var(--serif);font-size:24px;font-weight:500;color:var(--green);margin-bottom:6px}
+.promise span{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* ---------- filters + grid ---------- */
+.crumbs{display:flex;align-items:center;gap:10px;padding:18px 0 4px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+html[dir=rtl] .crumbs{letter-spacing:.02em;font-size:13px}
+.crumbs a{text-decoration:none;color:var(--green)}
+.crumbs h2{font-family:var(--serif);font-size:30px;font-weight:500;margin:0;text-transform:none;letter-spacing:0;color:var(--ink)}
+.filters{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:12px 0 18px}
+.sel{position:relative}
+.sel select{appearance:none;-webkit-appearance:none;border:1px solid var(--line);border-radius:999px;padding:8px 32px 8px 15px;background:var(--paper);font-size:12.5px;letter-spacing:.04em;max-width:230px}
+html[dir=rtl] .sel select{padding:8px 15px 8px 32px}
+.sel::after{content:"";position:absolute;inset-inline-end:14px;top:50%;width:6px;height:6px;border-inline-end:1px solid var(--muted);border-bottom:1px solid var(--muted);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+html[dir=rtl] .sel::after{transform:translateY(-70%) rotate(-45deg)}
+.sel.active select{border-color:var(--green);color:var(--green);background:var(--green-soft)}
+.count{margin-inline-start:auto;font-size:12px;color:var(--muted);letter-spacing:.1em}
+.clear{font-size:12px;color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:26px 14px;padding:4px 0 50px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:36px 24px}}
+.card{display:flex;flex-direction:column;gap:10px;text-align:start}
+.ph{position:relative;aspect-ratio:1;background:var(--paper);border:1px solid var(--line);overflow:hidden;transition:.25s}
+.ph::after{content:"";position:absolute;inset:7px;border:1px solid var(--gold-2);opacity:0;transition:.25s;pointer-events:none}
+.card:hover .ph{box-shadow:var(--shadow);border-color:var(--gold-2)}
+.card:hover .ph::after{opacity:1}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:7%;transition:opacity .4s;background:#fff}
+.ph img.alt{opacity:0}
+.card:hover .ph img.alt{opacity:1}
+.fav{position:absolute;top:9px;inset-inline-end:9px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;opacity:0;transition:opacity .2s;z-index:2}
+.card:hover .fav,.fav.on{opacity:1}
+.fav svg{width:15px;height:15px;fill:none;stroke:var(--ink);stroke-width:1.6}
+.fav.on svg{fill:var(--gold);stroke:var(--gold)}
+.ph .n{position:absolute;inset-inline-start:9px;bottom:9px;font-size:10px;letter-spacing:.1em;background:rgba(255,255,255,.9);padding:3px 8px;border-radius:999px;color:var(--muted);z-index:2}
+.t{font-family:var(--serif);font-size:18.5px;line-height:1.15;font-weight:500}
+html[dir=rtl] .t{font-size:18px}
+.m{font-size:12px;color:var(--muted);letter-spacing:.03em;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.m .p{color:var(--ink);font-weight:400}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;border:1px solid rgba(0,0,0,.12);vertical-align:-1px}
+.dot.w{background:#e9e9e6}.dot.y{background:#e2c57a}.dot.r{background:#e6b4a0}.dot.pl{background:#d6d8dc}.dot.tt{background:linear-gradient(90deg,#e9e9e6 50%,#e2c57a 50%)}
+.more{display:block;margin:0 auto 70px;padding:13px 30px;border:1px solid var(--green);color:var(--green);letter-spacing:.16em;font-size:12px;text-transform:uppercase}
+.more:hover{background:var(--green);color:#fff}
+.empty{padding:80px 0;text-align:center;color:var(--muted);font-family:var(--serif);font-size:24px}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(14,43,38,.6);display:none;align-items:center;justify-content:center;padding:0}
+.lb.open{display:flex}
+.lbox{background:var(--paper);width:100%;max-width:100%;min-width:0;height:100%;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,56vh) minmax(0,1fr);overflow:hidden}
+@media(min-width:900px){.lb{padding:28px}.lbox{max-width:1200px;height:min(780px,100%);border-radius:4px;grid-template-rows:1fr;grid-template-columns:1.25fr 1fr}}
+.stage{position:relative;background:var(--bg);display:flex;align-items:center;justify-content:center;min-height:0;min-width:0}
+.stage img{width:100%;height:100%;max-width:100%;object-fit:contain;padding:4%;background:#fff;touch-action:pan-y}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.arrow svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:1.6}
+.arrow.l{inset-inline-start:12px}.arrow.r{inset-inline-end:12px}
+html[dir=rtl] .arrow svg{transform:scaleX(-1)}
+.thumbs{position:absolute;inset-inline:0;bottom:10px;display:flex;gap:6px;justify-content:center}
+.thumbs button{width:52px;height:52px;border:1px solid var(--line);background:#fff;overflow:hidden;opacity:.7}
+.thumbs button.on{opacity:1;border-color:var(--gold)}
+.thumbs img{width:100%;height:100%;object-fit:contain}
+.info{padding:22px 24px;display:flex;flex-direction:column;gap:14px;overflow:auto;min-width:0}
+@media(min-width:900px){.info{padding:36px 38px}}
+.info .eyebrow{color:var(--gold)}
+.info h2{font-family:var(--serif);font-size:32px;font-weight:500;margin:0;line-height:1.1;color:var(--green)}
+.info .price{font-size:21px;font-family:var(--serif);font-weight:600}
+.info .price small{font-size:11px;font-family:var(--sans);color:var(--muted);letter-spacing:.08em;margin-inline-start:7px;font-weight:300}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:13px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0}
+.specs dt{color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-size:10.5px;padding-top:2px}
+html[dir=rtl] .specs dt{letter-spacing:0;font-size:12px}
+.specs dd{margin:0}
+.desc{font-size:13.5px;line-height:1.7;color:#454a47}
+.btns{display:flex;flex-direction:column;gap:8px;margin-top:auto}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 16px;letter-spacing:.14em;font-size:12px;text-transform:uppercase;text-decoration:none;border:1px solid var(--green);color:var(--green)}
+html[dir=rtl] .btn{letter-spacing:.02em;font-size:13.5px}
+.btn.g{background:var(--green);color:#fff}
+.btn.g:hover{background:var(--green-2)}
+.btn svg{width:16px;height:16px}
+.row2{display:flex;gap:8px}
+.row2 .btn{flex:1;padding:10px;font-size:11px}
+.close{position:absolute;top:10px;inset-inline-end:10px;z-index:2;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.close svg{width:16px;height:16px;stroke:var(--ink);stroke-width:1.6}
+.navitem{position:absolute;top:10px;inset-inline-start:10px;z-index:2;display:flex;gap:6px}
+.navitem button{height:38px;padding:0 13px;border-radius:999px;background:rgba(255,255,255,.92);font-size:11px;letter-spacing:.1em;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.tag{display:inline-block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--gold-2);border-radius:999px;color:var(--gold)}
+html[dir=rtl] .tag{letter-spacing:.02em;font-size:12px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--green);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;letter-spacing:.06em;opacity:0;transition:opacity .25s;pointer-events:none;z-index:60}
+.toast.on{opacity:1}
+footer{background:var(--green);color:rgba(255,255,255,.7);padding:36px 0 44px;font-size:12px;letter-spacing:.06em}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:center}
+footer b{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.3em;color:#fff;font-weight:500;text-transform:uppercase}
+@media(max-width:640px){.brand b{font-size:22px}.brand small{font-size:8px}.search{padding:7px 12px}.hbtn span{display:none}.hbtn.lang span{display:inline}.count{width:100%;margin:0}.cat{font-size:16px;padding:12px 12px 10px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#" id="home"><b>Vinsa</b><small data-i="brand_sub">Jewels · Dubai</small></a>
+    <label class="search ml-auto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" data-ph="search" autocomplete="off">
+    </label>
+    <button class="hbtn" id="favbtn">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+      <span data-i="shortlist">Shortlist</span> <b id="favn">0</b>
+    </button>
+    <button class="hbtn lang" id="langbtn">عربي</button>
+  </div>
+  <nav class="cats" id="catnav" hidden><div class="wrap row" id="cats"></div></nav>
+</header>
+
+<!-- ---------- LANDING ---------- -->
+<section id="landing">
+  <div class="hero">
+    <div class="wrap">
+      <div class="eyebrow" data-i="hero_eyebrow">Vinsa Jewels · Dubai</div>
+      <h1 data-i="hero_h1"></h1>
+      <p data-i="hero_p"></p>
+      <div class="ctas">
+        <a class="cta gold" href="#all" data-i="hero_cta1">Browse the catalogue</a>
+        <a class="cta" id="herowa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.7 3.1.6a2.6 2.6 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.2-.2-.2-.5-.3z"/></svg><span data-i="hero_cta2">Chat on WhatsApp</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="section">
+      <h2 data-i="cats_h2">Explore by category</h2>
+      <p class="sub" data-i="cats_sub"></p>
+      <div class="tiles" id="tiles"></div>
+    </div>
+    <div class="promise" id="promise"></div>
+  </div>
+</section>
+
+<!-- ---------- CATALOGUE ---------- -->
+<main class="wrap" id="catalogue" hidden>
+  <div class="crumbs"><a href="#" data-i="home">Home</a><span>/</span><h2 id="crumb"></h2></div>
+  <div class="filters">
+    <div class="sel" id="w-line"><select id="f-line"></select></div>
+    <div class="sel" id="w-metal"><select id="f-metal"></select></div>
+    <div class="sel" id="w-sub"><select id="f-sub"></select></div>
+    <div class="sel" id="w-sort"><select id="f-sort"></select></div>
+    <button class="clear" id="clear" hidden data-i="clear">Clear filters</button>
+    <div class="count" id="count"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+  <button class="more" id="more" hidden data-i="more">Show more</button>
+  <div class="empty" id="empty" hidden data-i="empty"></div>
+</main>
+
+<footer><div class="wrap"><b>Vinsa</b><div data-i="footer"></div><div>vinsajewels.com</div></div></footer>
+
+<div class="lb" id="lb" aria-modal="true" role="dialog">
+  <div class="lbox">
+    <div class="stage">
+      <div class="navitem"><button id="prevItem"></button><button id="nextItem"></button></div>
+      <button class="close" id="close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <img id="big" alt="">
+      <button class="arrow l" id="pl"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button>
+      <button class="arrow r" id="pr"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+    <div class="info" id="info"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script>
+/* ============ CONFIG ============ */
+const DEFAULT_LANG = 'ar';
+const WA_NUMBER = '971585689949';
+const CURRENCY  = 'AED';
+const CAT_ORDER = ['Engagement Rings','Wedding Bands','Rings','Necklaces & Pendants','Earrings','Bracelets','Pearl & Diamond'];
+const TILE_PICK = { 'Engagement Rings':'vinsa-halo-emerald-diamond-ring-18k-solid-gold', 'Necklaces & Pendants':'vinsa-circle-diamond-pendant', 'Bracelets':'vinsa-diamond-tennis-round-bracelet', 'Earrings':'vinsa-3-round-diamond-earrings', 'Rings':'vinsa-modern-emerald-cut-signet-ring', 'Pearl & Diamond':'vinsa-floral-diamond-freshwater-pearl-necklace' }; // item id to use as each category's cover
+/* ================================ */
+
+const I18N={
+en:{brand_sub:'Jewels · Dubai',search:'Search — oval, sapphire, tennis, halo…',shortlist:'Shortlist',home:'Home',all:'All pieces',
+ hero_eyebrow:'Vinsa Jewels · Dubai',hero_h1:'Diamonds, <i>made for you</i>',hero_p:'Natural and lab-grown diamonds set in 18K gold in our Dubai workshop. Browse the collection, shortlist what you love, and message us to make it yours.',
+ hero_cta1:'Browse the catalogue',hero_cta2:'Chat on WhatsApp',cats_h2:'Explore by category',cats_sub:'Every piece can be adapted — metal, stone, size.',
+ promise:[['Natural & lab-grown','Certified diamonds, your choice of origin and budget.'],['7–14 days','Custom and made-to-order pieces, crafted in Dubai.'],['2-year warranty','Against manufacturing defects, on every piece.']],
+ footer:'Natural & lab-grown diamonds · Custom pieces 7–14 days · 2-year warranty',
+ lines:{Vinsa:'Vinsa Collection',Studio:'Studio Designs',Atelier:'Atelier Selection'},
+ f_line:'All lines',f_metal:'Any metal',f_sub:'All styles',sort:['Featured','Price · low to high','Price · high to low','Name A–Z'],clear:'Clear filters',more:'Show more',empty:'Nothing matches — try fewer filters.',
+ pieces:n=>n+(n===1?' piece':' pieces'),shortlisted:'shortlisted',views:'views',
+ enquire:'Enquire on WhatsApp',fav:'♡ Shortlist',faved:'♥ Shortlisted',copy:'Copy link',online:'View online',copied:'Link copied',added:'Added to shortlist',removed:'Removed from shortlist',
+ por:'Price on request',vat:'incl. VAT',line:'Line',metal:'Metal',shape:'Shape',carat:'Carat',diamond:'Diamond',ref:'Ref',ct:'ct',prev:'‹ Prev',next:'Next ›',
+ desc:'Made to order in our Dubai workshop in 18K gold with natural or lab-grown diamonds. Every piece can be adapted — metal, stone size, shape and finger size. Delivery in 7–14 days; 2-year warranty against manufacturing defects.',
+ wa:(t,r,p)=>`Hi Vinsa, I'm interested in: ${t} (ref ${r})${p?' — '+p:''}. Could you share details and availability?`,wa_hero:'Hi Vinsa, I was browsing your catalogue and would like some help.',
+ kinds:{product:'Product',model:'On model',detail:'Detail'},
+ cats:{},metals:{},shapes:{},subs:{}},
+ar:{brand_sub:'مجوهرات · دبي',search:'ابحث — بيضاوي، ياقوت، تنس، هالو…',shortlist:'المفضلة',home:'الرئيسية',all:'كل القطع',
+ hero_eyebrow:'فينسا للمجوهرات · دبي',hero_h1:'ألماس <i>صُنع لأجلك</i>',hero_p:'ألماس طبيعي ومصنع مخبرياً مرصّع بذهب عيار 18 في ورشتنا بدبي. تصفّح المجموعة، احفظ ما يعجبك، وراسلنا لنصنعه لك.',
+ hero_cta1:'تصفّح الكتالوج',hero_cta2:'تواصل عبر واتساب',cats_h2:'تصفّح حسب الفئة',cats_sub:'كل قطعة قابلة للتعديل — المعدن، الحجر، المقاس.',
+ promise:[['طبيعي ومصنع مخبرياً','ألماس معتمد، تختار المصدر والميزانية.'],['7–14 يوماً','قطع مخصصة وحسب الطلب، تُصنع في دبي.'],['ضمان سنتان','ضد عيوب التصنيع على كل قطعة.']],
+ footer:'ألماس طبيعي ومصنع مخبرياً · قطع مخصصة خلال 7–14 يوماً · ضمان سنتان',
+ lines:{Vinsa:'مجموعة فينسا',Studio:'تصاميم الاستوديو',Atelier:'اختيارات الأتيليه'},
+ f_line:'كل المجموعات',f_metal:'كل المعادن',f_sub:'كل الأنماط',sort:['المميّز','السعر · من الأقل','السعر · من الأعلى','الاسم أ–ي'],clear:'مسح الفلاتر',more:'عرض المزيد',empty:'لا توجد نتائج — جرّب فلاتر أقل.',
+ pieces:n=>n+' قطعة',shortlisted:'في المفضلة',views:'صور',
+ enquire:'استفسر عبر واتساب',fav:'♡ أضف للمفضلة',faved:'♥ في المفضلة',copy:'نسخ الرابط',online:'عرض في الموقع',copied:'تم نسخ الرابط',added:'أُضيفت إلى المفضلة',removed:'أُزيلت من المفضلة',
+ por:'السعر عند الطلب',vat:'شامل الضريبة',line:'المجموعة',metal:'المعدن',shape:'الشكل',carat:'القيراط',diamond:'الألماس',ref:'الرقم المرجعي',ct:'قيراط',prev:'› السابق',next:'التالي ‹',
+ desc:'تُصنع حسب الطلب في ورشتنا بدبي من ذهب عيار 18 مع ألماس طبيعي أو مصنع مخبرياً. كل قطعة قابلة للتعديل — المعدن، حجم الحجر، الشكل ومقاس الإصبع. التسليم خلال 7–14 يوماً، وضمان سنتان ضد عيوب التصنيع.',
+ wa:(t,r,p)=>`مرحباً فينسا، أنا مهتم بـ: ${t} (رقم ${r})${p?' — '+p:''}. هل يمكنكم مشاركة التفاصيل والتوفر؟`,wa_hero:'مرحباً فينسا، كنت أتصفح الكتالوج وأرغب بالمساعدة.',
+ kinds:{product:'المنتج',model:'على الموديل',detail:'تفاصيل'},
+ cats:{'Engagement Rings':'خواتم الخطوبة','Wedding Bands':'خواتم الزواج','Rings':'خواتم','Necklaces & Pendants':'عقود وقلادات','Earrings':'أقراط','Bracelets':'أساور','Pearl & Diamond':'لؤلؤ وألماس'},
+ metals:{'White Gold':'ذهب أبيض','Yellow Gold':'ذهب أصفر','Rose Gold':'ذهب وردي','Platinum':'بلاتين','Two-Tone':'لونان'},
+ shapes:{'Round Brilliant':'دائري','Oval':'بيضاوي','Pear':'كمثري','Marquise':'ماركيز','Emerald':'إميرالد','Princess':'برنسيس','Radiant':'راديانت','Baguette':'باغيت','Trillion':'تريليون','Cushion':'كوشن','Asscher':'آشر','Heart':'قلب'},
+ subs:{'Designs':'تصاميم','Pave':'بافيه','Sapphire':'ياقوت أزرق','Ruby':'ياقوت أحمر','Emerald':'زمرد','Pearl':'لؤلؤ','Round':'دائري','Oval':'بيضاوي','Pear':'كمثري','Heart':'قلب','Baguette':'باغيت','Princess':'برنسيس','Cushion':'كوشن','tennis':'تنس','Tennis Bar':'تنس بار','V Collection':'مجموعة V','Atelier':'أتيليه','Arrow':'السهم','Constellation':'كوكبة','Divine Solitaires':'سوليتير','Rob & Mariel':'روب وماريل','Petra & Meehan Flannery':'بترا وميهان','Engagement Rings':'خواتم خطوبة','Wedding Rings':'خواتم زواج','Necklaces':'عقود','Tennis Necklaces':'عقود تنس','Tennis Bracelets':'أساور تنس','Gemstone Bracelets':'أساور أحجار كريمة','Earrings':'أقراط','Rings':'خواتم','Pearl and Diamond':'لؤلؤ وألماس'}}
+};
+let LANG='en'; let T=I18N.en;
+const tr=(map,v)=>(T[map]&&T[map][v])||v;
+const title=it=>LANG==='ar'&&it.ta?it.ta:it.title;
+
+const DATA=window.VINSA_DATA||[];
+DATA.forEach((it,i)=>{it.n=i; it.hay=[it.title,it.ta||'',it.cat,it.sub,it.line,(it.shape||''),...(it.metals||[]),...(it.tags||[]),...(it.skus||[])].join(' ').toLowerCase();});
+const $=s=>document.querySelector(s);
+const state={view:'home',cat:'',line:'',metal:'',sub:'',sort:'',q:'',favs:false,shown:60};
+let favs=new Set(); try{favs=new Set(JSON.parse(localStorage.getItem('vinsa-favs')||'[]'))}catch(e){}
+const saveFavs=()=>{try{localStorage.setItem('vinsa-favs',JSON.stringify([...favs]))}catch(e){} $('#favn').textContent=favs.size;};
+
+const fmt=n=>CURRENCY+' '+Math.round(n).toLocaleString('en');
+const priceText=it=>!it.price?'':(it.price[0]===it.price[1]?fmt(it.price[0]):fmt(it.price[0])+' – '+fmt(it.price[1]));
+const dotCls=m=>/white/i.test(m)?'w':/yellow/i.test(m)?'y':/rose/i.test(m)?'r':/plat/i.test(m)?'pl':'tt';
+const metalDots=it=>(it.metals||[]).map(m=>`<i class="dot ${dotCls(m)}" title="${tr('metals',m)}"></i>`).join('');
+const catCounts={}; DATA.forEach(it=>catCounts[it.cat]=(catCounts[it.cat]||0)+1);
+const cats=CAT_ORDER.filter(c=>catCounts[c]).concat(Object.keys(catCounts).filter(c=>!CAT_ORDER.includes(c)));
+
+/* ---------- language ---------- */
+function setLang(l){
+  LANG=l; T=I18N[l]; document.documentElement.lang=l; document.documentElement.dir=l==='ar'?'rtl':'ltr';
+  try{localStorage.setItem('vinsa-lang',l)}catch(e){}
+  $('#langbtn').textContent=l==='ar'?'EN':'عربي';
+  document.querySelectorAll('[data-i]').forEach(el=>{const v=T[el.dataset.i]; if(typeof v==='string') el.innerHTML=v;});
+  $('#q').placeholder=T.search; $('#prevItem').textContent=T.prev; $('#nextItem').textContent=T.next;
+  $('#herowa').href=`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(T.wa_hero)}`;
+  $('#promise').innerHTML=T.promise.map(p=>`<div><b>${p[0]}</b><span>${p[1]}</span></div>`).join('');
+  $('#tiles').innerHTML=cats.map(c=>{const it=DATA.find(x=>x.id===TILE_PICK[c])||DATA.find(x=>x.cat===c&&x.line==='Vinsa')||DATA.find(x=>x.cat===c);
+    return `<a class="tile" href="#c/${encodeURIComponent(c)}"><div class="im"><img src="${it.img[0].t}" alt="${tr('cats',c)}" loading="lazy"></div><div class="name">${tr('cats',c)}</div><div class="cnt">${catCounts[c]} ${T.pieces(catCounts[c]).replace(/^\d+\s?/,'')}</div></a>`;}).join('')
+    +`<a class="tile all" href="#all"><div class="im"><div><span>${DATA.length}</span><small>${T.all}</small></div></div><div class="name">${T.all}</div><div class="cnt">&nbsp;</div></a>`;
+  $('#cats').innerHTML=`<button class="cat" data-c="">${T.all} <span>${DATA.length}</span></button>`+cats.map(c=>`<button class="cat" data-c="${c}">${tr('cats',c)} <span>${catCounts[c]}</span></button>`).join('');
+  $('#f-sort').innerHTML=['','pa','pd','az'].map((v,i)=>`<option value="${v}">${T.sort[i]}</option>`).join('');
+  $('#f-sort').value=state.sort;
+  document.title=l==='ar'?'فينسا للمجوهرات — الكتالوج':'Vinsa Jewels — Catalogue';
+  if(state.view!=='home') render(false);
+  if(cur) open(cur.id,true);
+}
+$('#langbtn').onclick=()=>setLang(LANG==='ar'?'en':'ar');
+
+/* ---------- routing ---------- */
+function route(){
+  const h=decodeURIComponent(location.hash.slice(1));
+  if(cur&&!h.startsWith('p/')) closeLb(false);
+  if(h===''||h==='home'){showView('home'); return;}
+  if(h==='all'){state.cat=''; state.favs=false; showView('cat'); render(true); return;}
+  if(h==='fav'){state.favs=true; state.cat=''; showView('cat'); render(true); return;}
+  if(h.startsWith('c/')){state.cat=h.slice(2); state.favs=false; showView('cat'); render(true); return;}
+  if(h.startsWith('p/')){const id=h.slice(2); const it=DATA.find(x=>x.id===id); if(!it) return; if(state.view!=='cat'){state.cat=it.cat; showView('cat'); render(true);} open(id,true); return;}
+  showView('home');
+}
+function showView(v){state.view=v; $('#landing').hidden=v!=='home'; $('#catalogue').hidden=v!=='cat'; $('#catnav').hidden=v!=='cat'; $('#favbtn').classList.toggle('on',state.favs&&v==='cat'); window.scrollTo({top:0});}
+window.addEventListener('hashchange',route);
+$('#favbtn').onclick=()=>{ if(state.view==='cat'&&state.favs){state.favs=false; location.hash=state.cat?'c/'+encodeURIComponent(state.cat):'all';} else location.hash='fav'; };
+$('#cats').addEventListener('click',e=>{const b=e.target.closest('.cat'); if(!b) return; state.sub=''; location.hash=b.dataset.c?'c/'+encodeURIComponent(b.dataset.c):'all';});
+
+/* ---------- filters ---------- */
+function fill(sel,vals,label,labelFn){const s=$(sel); const cur=s.value; s.innerHTML=`<option value="">${label}</option>`+vals.map(v=>`<option value="${v}">${labelFn?labelFn(v):v}</option>`).join(''); s.value=vals.includes(cur)?cur:''; return s.value;}
+function refreshSelects(){
+  const base=DATA.filter(it=>(!state.cat||it.cat===state.cat));
+  state.line=fill('#f-line',[...new Set(base.map(it=>it.line))],T.f_line,v=>T.lines[v]||v);
+  state.metal=fill('#f-metal',[...new Set(base.flatMap(it=>it.metals||[]))].sort(),T.f_metal,v=>tr('metals',v));
+  state.sub=fill('#f-sub',[...new Set(base.filter(it=>!state.line||it.line===state.line).map(it=>it.sub).filter(Boolean))].sort(),T.f_sub,v=>tr('subs',v));
+  ['line','metal','sub','sort'].forEach(k=>$('#w-'+k).classList.toggle('active',!!state[k]));
+  $('#clear').hidden=!(state.line||state.metal||state.sub||state.q||state.sort);
+}
+['#f-line','#f-metal','#f-sub','#f-sort'].forEach(s=>$(s).addEventListener('change',()=>{state.line=$('#f-line').value; state.metal=$('#f-metal').value; state.sub=$('#f-sub').value; state.sort=$('#f-sort').value; render(true);}));
+$('#clear').onclick=()=>{state.line=state.metal=state.sub=state.sort=state.q=''; $('#q').value=''; render(true);};
+let qt; $('#q').addEventListener('input',e=>{clearTimeout(qt); qt=setTimeout(()=>{state.q=e.target.value.trim().toLowerCase(); if(state.view!=='cat'){state.cat=''; showView('cat'); history.replaceState(null,'','#all');} render(true);},120);});
+
+/* ---------- list ---------- */
+let list=[];
+function compute(){
+  const words=state.q.split(/\s+/).filter(Boolean);
+  list=DATA.filter(it=>(!state.cat||it.cat===state.cat)&&(!state.line||it.line===state.line)&&(!state.metal||(it.metals||[]).includes(state.metal))&&(!state.sub||it.sub===state.sub)&&(!state.favs||favs.has(it.id))&&words.every(w=>it.hay.includes(w)));
+  const L={Vinsa:0,Studio:1,Atelier:2};
+  if(state.sort==='pa') list.sort((a,b)=>(a.price?a.price[0]:1e12)-(b.price?b.price[0]:1e12));
+  else if(state.sort==='pd') list.sort((a,b)=>(b.price?b.price[1]:-1)-(a.price?a.price[1]:-1));
+  else if(state.sort==='az') list.sort((a,b)=>title(a).localeCompare(title(b)));
+  else list.sort((a,b)=>(L[a.line]-L[b.line])||a.n-b.n);
+}
+function card(it){
+  const alt=it.img.find(i=>i.k==='model')||(it.img.length>1?it.img[1]:null);
+  return `<button class="card" data-id="${it.id}">
+    <div class="ph">
+      <img src="${it.img[0].t}" alt="${title(it)}" loading="lazy">
+      ${alt?`<img class="alt" src="${alt.t}" alt="" loading="lazy">`:''}
+      <span class="fav ${favs.has(it.id)?'on':''}" data-fav="${it.id}"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>
+      ${it.img.length>1?`<span class="n">${it.img.length} ${T.views}</span>`:''}
+    </div>
+    <div class="t">${title(it)}</div>
+    <div class="m">${it.price?`<span class="p">${priceText(it)}</span>`:`<span>${it.shape?tr('shapes',it.shape):tr('subs',it.sub||'')}</span>`}${metalDots(it)}</div>
+  </button>`;
+}
+function render(reset){
+  if(reset){state.shown=60; refreshSelects();}
+  compute();
+  document.querySelectorAll('.cat').forEach(b=>b.classList.toggle('on',b.dataset.c===state.cat&&!state.favs));
+  $('#crumb').textContent=state.favs?T.shortlist:(state.cat?tr('cats',state.cat):T.all);
+  $('#grid').innerHTML=list.slice(0,state.shown).map(card).join('');
+  $('#more').hidden=list.length<=state.shown;
+  $('#empty').hidden=list.length>0;
+  $('#count').textContent=T.pieces(list.length)+(state.favs?' · '+T.shortlisted:'');
+  $('#favbtn').classList.toggle('on',state.favs);
+}
+$('#more').onclick=()=>{state.shown+=60; render(false);};
+$('#grid').addEventListener('click',e=>{
+  const f=e.target.closest('[data-fav]'); if(f){e.stopPropagation(); toggleFav(f.dataset.fav); f.classList.toggle('on',favs.has(f.dataset.fav)); return;}
+  const c=e.target.closest('.card'); if(c) location.hash='p/'+c.dataset.id;
+});
+function toggleFav(id){favs.has(id)?favs.delete(id):favs.add(id); saveFavs(); toast(favs.has(id)?T.added:T.removed);}
+let tt; function toast(m){const t=$('#toast'); t.textContent=m; t.classList.add('on'); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('on'),1400);}
+
+/* ---------- lightbox ---------- */
+let cur=null, ci=0;
+const waLink=it=>`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(T.wa(title(it),(it.skus&&it.skus.length?it.skus.join('/'):it.id),priceText(it)))}`;
+function open(id,keepIndex){
+  const it=DATA.find(x=>x.id===id); if(!it) return; if(!keepIndex||cur!==it) ci=0; cur=it;
+  $('#thumbs').innerHTML=it.img.length>1?it.img.map((im,i)=>`<button data-i="${i}" title="${T.kinds[im.k]||''}"><img src="${im.t}" alt=""></button>`).join(''):'';
+  $('#pl').style.display=$('#pr').style.display=it.img.length>1?'':'none';
+  $('#info').innerHTML=`
+    <div class="eyebrow">${tr('cats',it.cat)}${it.sub&&it.sub!==it.cat?' · '+tr('subs',it.sub):''}</div>
+    <h2>${title(it)}</h2>
+    ${it.price?`<div class="price">${priceText(it)}<small>${T.vat}</small></div>`:`<div><span class="tag">${T.por}</span></div>`}
+    <dl class="specs">
+      <dt>${T.line}</dt><dd>${T.lines[it.line]||it.line}</dd>
+      ${it.metals&&it.metals.length?`<dt>${T.metal}</dt><dd>${it.metals.map(m=>`<i class="dot ${dotCls(m)}"></i> ${tr('metals',m)}`).join(' &nbsp; ')}</dd>`:''}
+      ${it.shape?`<dt>${T.shape}</dt><dd>${tr('shapes',it.shape)}</dd>`:''}
+      ${it.carats&&it.carats.length?`<dt>${T.carat}</dt><dd>${it.carats.join(' · ')} ${T.ct}</dd>`:''}
+      ${it.origin&&it.origin.length?`<dt>${T.diamond}</dt><dd>${it.origin.map(o=>LANG==='ar'?(/lab/i.test(o)?'ألماس مصنع مخبرياً':/natural/i.test(o)?'ألماس طبيعي':o):o).join(' · ')}</dd>`:''}
+      <dt>${T.ref}</dt><dd dir="ltr">${it.skus&&it.skus.length?it.skus.join(' · '):it.id}</dd>
+    </dl>
+    <div class="desc">${LANG==='en'&&it.desc?it.desc:T.desc}</div>
+    <div class="btns">
+      <a class="btn g" target="_blank" rel="noopener" href="${waLink(it)}"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.7 3.1.6a2.6 2.6 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.2-.2-.2-.5-.3z"/></svg> ${T.enquire}</a>
+      <div class="row2">
+        <button class="btn" id="favlb">${favs.has(it.id)?T.faved:T.fav}</button>
+        <button class="btn" id="copylb">${T.copy}</button>
+        ${it.url?`<a class="btn" target="_blank" rel="noopener" href="${it.url}">${T.online}</a>`:''}
+      </div>
+    </div>`;
+  $('#favlb').onclick=()=>{toggleFav(it.id); $('#favlb').textContent=favs.has(it.id)?T.faved:T.fav; render(false);};
+  $('#copylb').onclick=()=>{const u=location.href.split('#')[0]+'#p/'+it.id; (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>toast(T.copied)).catch(()=>prompt('',u));};
+  show(ci); $('#lb').classList.add('open'); document.body.style.overflow='hidden';
+}
+function show(i){ci=(i+cur.img.length)%cur.img.length; $('#big').src=cur.img[ci].f; $('#big').alt=title(cur); document.querySelectorAll('#thumbs button').forEach((b,j)=>b.classList.toggle('on',j===ci));}
+function closeLb(nav=true){ $('#lb').classList.remove('open'); document.body.style.overflow=''; cur=null; if(nav) history.back(); }
+function step(d){const i=list.findIndex(x=>x.id===cur.id); const nx=list[(i+d+list.length)%list.length]; if(nx) history.replaceState(null,'','#p/'+nx.id), open(nx.id);}
+$('#close').onclick=()=>closeLb(); $('#lb').addEventListener('click',e=>{if(e.target.id==='lb') closeLb();});
+$('#pl').onclick=()=>show(ci-1); $('#pr').onclick=()=>show(ci+1);
+$('#prevItem').onclick=()=>step(-1); $('#nextItem').onclick=()=>step(1);
+$('#thumbs').addEventListener('click',e=>{const b=e.target.closest('button'); if(b) show(+b.dataset.i);});
+document.addEventListener('keydown',e=>{ if(!cur) return; const rtl=LANG==='ar'; if(e.key==='Escape') closeLb(); else if(e.key==='ArrowLeft') (e.shiftKey?step(rtl?1:-1):show(ci+(rtl?1:-1))); else if(e.key==='ArrowRight') (e.shiftKey?step(rtl?-1:1):show(ci+(rtl?-1:1))); });
+let tx=null; $('#big').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+$('#big').addEventListener('touchend',e=>{ if(tx===null) return; const dx=e.changedTouches[0].clientX-tx; tx=null; if(Math.abs(dx)>50) (cur.img.length>1?show(ci+(dx<0?1:-1)):step(dx<0?1:-1)); },{passive:true});
+
+/* ---------- boot ---------- */
+saveFavs();
+let l=DEFAULT_LANG; try{const u=new URLSearchParams(location.search).get('lang'); l=u||DEFAULT_LANG;}catch(e){}
+if(!I18N[l]) l='en';
+setLang(l); route();
+</script>
+</body>
+</html>
